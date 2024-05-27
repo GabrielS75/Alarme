@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio com Alarme Intuitivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="clock-container">
+        <div id="clock"></div>
+        <div class="alarm-settings">
+            <input type="time" id="alarm-time">
+            <br>
+            <br>
+            <input type="text" id="alarm-message" placeholder="Digite o lembrete">
+            <br>
+            <br>
+
+            <div class="image-upload">
+                <label for="custom-image"></label>
+                <input type="file" id="custom-image" accept="image/*" style="display: none;">
+                <button onclick="document.getElementById('custom-image').click();">Selecionar Imagem</button>
+            </div>
+            <br>
+            <br>
+
+            <div class="music-upload">
+            <label for="custom-sound"></label>
+            <input type="file" id="custom-sound" accept="audio/*" style="display: none;">
+            <button onclick="document.getElementById('custom-sound').click();">Selecionar Música</button>
+            </div>
+            <br>
+            <br>
+            
+            <div class="color">
+            <label for="custom-sound">Escolha uma cor:</label>
+            <input type="color" id="alarm-color" value="#ffffff">
+            <br>
+            <br>
+        
+            <button onclick="setAlarm()"><i class="fas fa-plus"></i> Adicionar Alarme</button>
+            </div>
+        </div>
+        <div id="alarms-list"></div>
+        <div id="notification" class="notification"></div>
+        <div id="alarm-image-display" class="alarm-image-display">
+            <button id="stop-alarm-button" onclick="stopAlarm()">Parar</button>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <h5>&copy; Todos direitos reservados. Claudio Henrique, Gabriel Ramos, Guilherme Martins, José Henrique, Victhor Souza e Yan Silva.</h5>
+    </footer>
+    <audio id="alarm-sound" src="alarm.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+    
+</body>
+
+
+</html>
